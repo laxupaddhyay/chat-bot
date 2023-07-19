@@ -18,7 +18,7 @@ function sendMessage() {
     addMessage(message, 'You');
     input.value = '';
 
-    fetch('https://13.233.72.40:5000/chat', {
+    fetch('http://13.233.72.40:5000/chat', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json',
