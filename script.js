@@ -23,7 +23,7 @@ function sendMessage() {
         headers: {
             'Content-Type': 'application/json',
             // Optionally, specify the HTTP version you expect
-             'HTTP-Version': 'HTTP/1.1'
+             //'HTTP-Version': 'HTTP/1.1'
         },
         body: JSON.stringify({ message: message }),
         mode: 'cors', // Set the mode to 'cors' to enforce CORS and HTTPS
