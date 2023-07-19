@@ -18,12 +18,15 @@ function sendMessage() {
     addMessage(message, 'You');
     input.value = '';
 
-    fetch('http://13.233.72.40:5000/chat', {
+    fetch('https://13.233.72.40:5000/chat', {
         method: 'POST',
         headers: {
-            'Content-Type': 'application/json'
+            'Content-Type': 'application/json',
+            // Optionally, specify the HTTP version you expect
+            // 'HTTP-Version': 'HTTP/1.1'
         },
-        body: JSON.stringify({ message: message })
+        body: JSON.stringify({ message: message }),
+        mode: 'cors', // Set the mode to 'cors' to enforce CORS and HTTPS
     })
     .then(response => response.json())
     .then(data => {
